@@ -8,7 +8,7 @@ from lxml import etree
 
 class Mm131Parser:
     def __init__(self, save_path='../mm131/', use_parallel=True, save=True):
-        self.base_url = 'https://www.mmm131.com/xinggan/'
+        self.base_url = 'https://www.mm1311.net/xinggan/'
         self.save_path = save_path
         self.save = save
         self.use_parallel = use_parallel
@@ -60,7 +60,7 @@ class Mm131Parser:
 
     def _ids_titles_for_search(self, key, page='1'):
         key = quote(key.encode('GBK'), 'utf-8')
-        url = 'https://www.mmm131.com/search/?key=%s&page=%s' % (key, page)
+        url = 'https://www.mm1311.net/search/?key=%s&page=%s' % (key, page)
         try:
             rep = requests.get(url=url, headers=self.set_header(''))
             rep.encoding = 'GBK'
